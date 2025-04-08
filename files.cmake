@@ -1,5 +1,5 @@
 set(SRC_FILES
-    App.cpp
+        App.cpp
 )
 
 set(INCLUDE_FILES

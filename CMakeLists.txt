@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
-project(REPLACE_WITH_YOUR_PROJECT_NAME)
+project(KirbyGame)
 
 set(CMAKE_CXX_STANDARD 17)
-
 cmake_policy(SET CMP0135 NEW)
 
 include(FetchContent)
@@ -35,6 +34,18 @@ add_executable(${PROJECT_NAME}
     ${SRC_DIR}/main.cpp
     ${SRC_FILES}
     ${HEADER_FILES}
+        include/Kirby.hpp
+        include/ALL_Include.hpp
+        src/Kirby.cpp
+        include/All_Include.hpp
+        include/Enemy.hpp
+        include/Level1.hpp
+        include/Level2.hpp
+        include/Level3.hpp
+        include/SceneManager.hpp
+        include/StillObject.hpp
+        include/AnimationObject.hpp
+        include/SceneObject.hpp
 )
 
 if(MSVC)
