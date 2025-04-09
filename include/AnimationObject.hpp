@@ -15,7 +15,7 @@ class AnimationObject : public Util::GameObject{
 public:
     AnimationObject(const size_t size,std::string Path){
         for(size_t i = 0;i < size;i++) {
-            AddImagePath(Path + std::to_string(i) + ".png");
+            AddImagePath(Path + std::to_string(i) + ".pn");
         }
         m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,100,true ,100);
     }
