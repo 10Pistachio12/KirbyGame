@@ -5,6 +5,8 @@
 #ifndef ANIMATIONOBJECT_HPP
 #define ANIMATIONOBJECT_HPP
 
+#include <sstream>
+#include <iomanip>
 #include <string>
 #include "Util/GameObject.hpp"
 #include "Util/Animation.hpp"
@@ -13,11 +15,13 @@ enum Way {left,right};
 
 class AnimationObject : public Util::GameObject{
 public:
-    AnimationObject(const size_t size,std::string Path){
+    AnimationObject(const size_t size,std::string Path,  int digits){
         for(size_t i = 0;i < size;i++) {
-            AddImagePath(Path + std::to_string(i) + ".png");
+            std::ostringstream oss;
+            oss << Path << std::setw(digits) << std::setfill('0') << i << ".png";
+            AddImagePath(oss.str());
         }
-        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,100,true ,100);
+        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,62.5,true ,100);
     }
 
     Way GetWay(){return way;}

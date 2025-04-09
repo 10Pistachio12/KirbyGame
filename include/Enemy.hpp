@@ -11,7 +11,7 @@
 
 class Enemy : public AnimationObject {
 public:
-    Enemy(const size_t size, const std::string &Path) : AnimationObject(size,Path) {};
+    Enemy(const size_t size, const std::string &Path, const int digits) : AnimationObject(size,Path, digits) {};
     void SetEnemyVect(const std::vector<std::shared_ptr<Enemy>> &enemies) {
         this->enemies() = enemies;
     };

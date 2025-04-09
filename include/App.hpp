@@ -2,6 +2,7 @@
 #define APP_HPP
 
 #include "All_Include.hpp"
+#include "AnimationObject.hpp"
 
 namespace Util::Logger {
     enum class Level;
@@ -32,7 +33,7 @@ public:
 private:
     void ValidTask();
 
-    std::shared_ptr<StillObject> m_Background;
+    std::shared_ptr<AnimationObject> m_AnimatedBackground;
     std::shared_ptr<SceneManager> m_SceneManager ;
     std::shared_ptr <Util::Renderer> m_renderer;
     std::shared_ptr<SceneManager> m_level;

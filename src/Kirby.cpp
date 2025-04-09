@@ -4,6 +4,14 @@
 
 #include "Kirby.hpp"
 
+void m_kirby::SetCharacterSize(glm::vec2 size) {
+    if (Idle) Idle->SetSize(size);
+    if (Walking) Walking->SetSize(size);
+    if (Running) Running->SetSize(size);
+    if (Down) Down->SetSize(size);
+    if (Jump) Jump->SetSize(size);
+}
+
 void m_kirby::SetCurrentState(const Action state){
     CurrentState = state;
     this->SetDrawable(GetCurrentAnimation()->GetDrawable());
@@ -14,6 +22,8 @@ Action m_kirby::GetCurrentState() {
 };
 
 std::shared_ptr<AnimationObject> m_kirby::GetCurrentAnimation(){
+    auto kirby = std::make_shared<m_kirby>();
+    kirby->SetCharacterSize({0.2, 0.2});
     switch(CurrentState){
         case(Action::Idle):
             return Idle;

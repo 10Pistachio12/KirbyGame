@@ -17,17 +17,11 @@ public:
         m_Transform.translation = position;
     }
 
-    void SetSize(const glm::vec2& size) {
-        m_Transform.scale = size;
-    }
+    void SetSize(const glm::vec2& size) {m_Transform.scale = size;}
 
-    glm::vec2 GetPosition() const {
-        return m_Transform.translation;
-    }
+    glm::vec2 GetPosition() const {return m_Transform.translation;}
 
-    std::shared_ptr<Core::Drawable> GetDrawable() const {
-        return m_Drawable;
-    }
+    std::shared_ptr<Core::Drawable> GetDrawable() const {return m_Drawable;}
 
     void SetImagePath(const std::string &path) {
         this->ImagePath = path;
