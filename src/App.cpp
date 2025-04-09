@@ -8,7 +8,7 @@
 
 void App::MENU() {
     LOG_TRACE("MENU");
-    m_Background = std::make_shared<StillObject> (RESOURCE_DIR "/image/Background/frame_0000.png");
+    m_Background = std::make_shared<StillObject> (RESOURCE_DIR "/image/Background/Menu/frame_0000.png");
     m_Background->SetPosition({0,0});
     m_Background->SetZIndex(49);
     m_Background->SetSize({1.6,1.2});

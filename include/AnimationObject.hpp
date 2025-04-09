@@ -14,10 +14,10 @@ enum Way {left,right};
 class AnimationObject : public Util::GameObject{
 public:
     AnimationObject(const size_t size,std::string Path){
-        for(size_t i = 1;i <= size;i++) {
+        for(size_t i = 0;i < size;i++) {
             AddImagePath(Path + std::to_string(i) + ".png");
         }
-        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,100,true,20);
+        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,100,true ,100);
     }
 
     Way GetWay(){return way;}
