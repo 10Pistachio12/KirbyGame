@@ -20,11 +20,11 @@ public:
     void SetSceneObject(std::shared_ptr<SceneObject> SceneObject);
     virtual void condition() = 0;
     void Start() {
-        m_kirby->SetPosition({-620,-257});
+        m_kirby->SetPosition({-500,-200});
         m_kirby->SetCurrentState(Action::Idle);
-        m_kirby->SetZIndex(50);
-        m_kirby->SetSize({1,1});
-        m_Background->SetPosition({4500,0});
+        m_kirby->SetZIndex(60);
+        m_kirby->SetSize({2,2});
+        m_Background->SetPosition({0,0});
         m_renderer->AddChild(m_Background);
         m_renderer->AddChild(m_kirby);
     }
@@ -42,7 +42,7 @@ public:
             else {
                 m_kirby->SetPosition({m_kirby->GetPosition().x + 4,m_kirby->GetPosition().y});
             }
-            m_kirby->SetSize({1,1});
+            m_kirby->SetSize({2,2});
             m_kirby->SetCurrentState(Action::Running);
     }
 
@@ -52,7 +52,7 @@ public:
                 m_kirby->SetPosition({-620,m_kirby->GetPosition().y});
             }
             m_kirby->SetPosition({m_kirby->GetPosition().x - 4,m_kirby->GetPosition().y});
-            m_kirby->SetSize({-1,1});
+            m_kirby->SetSize({-2,2});
             m_kirby->SetCurrentState(Action::Running);
         }
 

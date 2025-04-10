@@ -23,7 +23,7 @@ Action m_kirby::GetCurrentState() {
 
 std::shared_ptr<AnimationObject> m_kirby::GetCurrentAnimation(){
     auto kirby = std::make_shared<m_kirby>();
-    kirby->SetCharacterSize({0.2, 0.2});
+    kirby->SetCharacterSize({2,2});
     switch(CurrentState){
         case(Action::Idle):
             return Idle;
@@ -40,6 +40,9 @@ std::shared_ptr<AnimationObject> m_kirby::GetCurrentAnimation(){
         case(Action::Jump):
             return Jump;
             break;
+        case(Action::Slide):
+            return Slide;
+        break;
         default:
             return nullptr;
             break;

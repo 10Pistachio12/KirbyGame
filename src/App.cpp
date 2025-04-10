@@ -12,7 +12,7 @@ void App::MENU() {
     m_AnimatedBackground = std::make_shared<AnimationObject>(210, RESOURCE_DIR "/image/Background/Menu/frame_", 4);
     m_AnimatedBackground->SetPosition({0,0});
     m_AnimatedBackground->SetZIndex(60);
-    m_AnimatedBackground->SetSize({0.6,0.6});
+    m_AnimatedBackground->SetSize({0.65,0.65});
 
     m_renderer->AddChild(m_AnimatedBackground);
 
