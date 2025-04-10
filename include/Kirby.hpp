@@ -29,7 +29,9 @@ public:
     std::shared_ptr<AnimationObject> GetCurrentAnimation();
 
     bool IfCollide(const std::shared_ptr<GameObject> &Object);
-    void update() ;
+
+    //void Update() ;
+
 private:
     std::shared_ptr<AnimationObject> Idle = std::make_shared<AnimationObject>(4,RESOURCE_DIR"/image/Kirby/commit_kirby/Idle/idle_", 1);
     std::shared_ptr<AnimationObject> Walking = std::make_shared<AnimationObject>(11,RESOURCE_DIR"/image/Kirby/commit_kirby/Walk/walk_", 1);

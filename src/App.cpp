@@ -50,6 +50,7 @@ void App::Start() {
 
 void App::Update() {
     m_SceneManager->update();
+
     /*
      * Do not touch the code below as they serve the purpose for
      * closing the window.
