@@ -34,18 +34,19 @@ add_executable(${PROJECT_NAME}
     ${SRC_DIR}/main.cpp
     ${SRC_FILES}
     ${HEADER_FILES}
-        include/Kirby.hpp
+        include/Kirby/Kirby.hpp
         include/ALL_Include.hpp
-        src/Kirby.cpp
+        src/Kirby/Kirby.cpp
         include/All_Include.hpp
-        include/Enemy.hpp
-        include/Level1.hpp
-        include/Level2.hpp
-        include/Level3.hpp
-        include/SceneManager.hpp
+        include/Enemy/Enemy.hpp
+        include/Level/Level1.hpp
+        include/Level/Level2.hpp
+        include/Level/Level3.hpp
+        include/Level/SceneManager.hpp
         include/StillObject.hpp
         include/AnimationObject.hpp
         include/SceneObject.hpp
+        include/GravityManager.hpp
 )
 
 if(MSVC)

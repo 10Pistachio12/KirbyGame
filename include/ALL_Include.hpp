@@ -16,11 +16,11 @@
 #include "Util/Logger.hpp"
 #include "StillObject.hpp"
 #include "AnimationObject.hpp"
-#include "Kirby.hpp"
-#include "SceneManager.hpp"
+#include "Kirby/Kirby.hpp"
+#include "Level/SceneManager.hpp"
 
-#include "Level1.hpp"
-#include "Level2.hpp"
-#include "Level3.hpp"
+#include "Level/Level1.hpp"
+#include "Level/Level2.hpp"
+#include "Level/Level3.hpp"
 
 #endif //ALL_INCLUDE_H

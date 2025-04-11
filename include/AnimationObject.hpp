@@ -15,13 +15,14 @@ enum Way {left,right};
 
 class AnimationObject : public Util::GameObject{
 public:
-    AnimationObject(const size_t size,std::string Path,  int digits){
+    AnimationObject(const size_t size, const std::string& Path, int digits){
+
         for(size_t i = 0;i < size;i++) {
             std::ostringstream oss;
             oss << Path << std::setw(digits) << std::setfill('0') << i << ".png";
             AddImagePath(oss.str());
         }
-        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,62.5,true ,100);
+        m_Drawable = std::make_shared<Util::Animation>(AnimationPaths,true,62.5,true ,62.5);
     }
 
     Way GetWay(){return way;}
@@ -50,6 +51,8 @@ public:
         bool collisionY = std::abs(posA.y - posB.y) * 2 < (sizeA.y + sizeB.y);
         return collisionX && collisionY;
     }
+
+    int Update();
 
 protected:
     std::shared_ptr<Util::Animation> Animations;
